@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xuân Tình Nguyện 2026 - Mùa Xuân Đỏ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.css" />
+</head>
+<body data-theme="light">
+
+    <!-- TÍNH NĂNG 1: PRE-LOADER -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="images/hoa-anh-dao.png" alt="Loading..." class="flower-spinner">
+            <h3 class="preloader-text">Xuân Tình Nguyện - Xuân Yêu thương 2026</h3>
+        </div>
+    </div>
+
+    <!-- POPUP CHÀO MỪNG -->
+    <div id="welcome-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span id="close-popup" class="close-btn">&times;</span>
+            <h2>Chào mừng bạn đến với chiến dịch!</h2>
+            <p>Đây là nơi lan tỏa những giá trị tốt đẹp của Xuân Tình Nguyện 2026.</p>
+        </div>
+    </div>
+
+    <!-- HEADER & MENU -->
+    <header>
+        <nav>
+            <div class="logo"><a href="main.html">Mùa Xuân Đỏ 2026</a></div> <!-- Link về trang chủ -->
+            <ul class="nav-links">
+                <li><a href="main.html">Trang chủ</a></li>
+                <li><a href="#gioi-thieu">Giới thiệu</a></li>
+                <li><a href="tin-tuc.html">Tin tức</a></li> <!-- Link sang trang tin tức -->
+                <li><a href="#team">Ban Tổ Chức</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#dang-ky">Đăng ký</a></li>
+            </ul>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox"><input type="checkbox" id="checkbox" /><div class="slider round"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></div></label>
+            </div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECTION: HERO BANNER -->
+        <section id="home" class="hero-banner">
+            <div class="hero-content">
+                <h1 class="hidden">Xuân Tình Nguyện 2026</h1>
+                <p class="hidden">Mùa Xuân Đỏ - Xuân Yêu Thương</p>
+                <div id="countdown" class="hidden">
+                    <div><span id="days">00</span>Ngày</div>
+                    <div><span id="hours">00</span>Giờ</div>
+                    <div><span id="minutes">00</span>Phút</div>
+                    <div><span id="seconds">00</span>Giây</div>
+                </div>
+                <a href="#dang-ky" class="btn hidden">Đăng ký ngay</a>
+            </div>
+        </section>
+
+        <!-- SECTION: GIỚI THIỆU -->
+        <section id="gioi-thieu" class="container">
+            <h2 class="hidden">Về chiến dịch "Mùa Xuân Đỏ 2026"</h2>
+            <p class="hidden">Mỗi mùa xuân về không chỉ điểm tô sắc mai, sắc đào rực rỡ, mà còn khơi dậy tinh thần sẻ chia và lan tỏa yêu thương đến những mảnh đời còn thiếu thốn. Khi phố phường ngập tràn tiếng cười, đâu đó vẫn còn những ước mong về một cái Tết trọn vẹn nơi những mái ấm nhỏ bé.
+
+Chiến dịch Xuân tình nguyện – Mùa xuân đỏ 2026, do CLB Sinh viên 5 Tốt, Trường Đại học Khoa học Tự nhiên – ĐHQG TP.HCM phát động, mang đến đội hình “Xuân yêu thương” với những phần quà ý nghĩa: bánh chưng xanh, câu đối đỏ, và trên hết là nụ cười, niềm vui và sự gắn kết.
+
+Đây không chỉ là hành trình thiện nguyện, mà còn là cơ hội để mỗi trái tim cùng hòa nhịp, viết nên một mùa xuân của sẻ chia và hạnh phúc.</p>
+        <!-- MỤC MỚI: NÚT CHIA SẺ -->
+        <div class="share-buttons hidden">
+            <span>Chia sẻ câu chuyện này:</span>
+            <!-- Nút chia sẻ Facebook -->
+            <a href="#" class="share-btn facebook" id="share-facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <!-- Nút chia sẻ Zalo -->
+            <a href="#" class="share-btn zalo" id="share-zalo" target="_blank">
+                <i class="fa-solid fa-comment-dots"></i> Zalo
+            </a>
+        </div>
+        </section>
+        <!-- MỤC MỚI: NHỮNG CON SỐ ẤN TƯỢNG -->
+        <section id="stats" class="container dark-section">
+            <h2 class="hidden">Hành trình chúng tôi hướng đến</h2>
+            <div class="stats-grid">
+                <!-- Con số 1 -->
+                <div class="stat-item hidden">
+                    <i class="fas fa-users"></i>
+                    <h3 class="stat-number" data-target="100">0</h3>
+                    <p>Tình nguyện viên</p>
+                </div>
+                <!-- Con số 2 -->
+                <div class="stat-item hidden">
+                    <i class="fas fa-home"></i>
+                    <h3 class="stat-number" data-target="3">0</h3>
+                    <p>Mái ấm được hỗ trợ</p>
+                </div>
+                <!-- Con số 3 -->
+                <div class="stat-item hidden">
+                    <i class="fas fa-gift"></i>
+                    <h3 class="stat-number" data-target="1000">0</h3>
+                    <p>Phần quà sẽ trao</p>
+                </div>
+                <!-- Con số 4 -->
+                <div class="stat-item hidden">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3 class="stat-number" data-target="5">0</h3>
+                    <p>Năm hoạt động</p>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION: LỊCH TRÌNH -->
+        <section id="lich-trinh" class="container dark-section">
+             <h2 class="hidden">Lịch trình hoạt động</h2>
+            <div class="timeline">
+                <div class="timeline-item hidden"><div class="timeline-dot"></div><div class="timeline-content"><h3>Giai đoạn 1: Khởi động & Gây quỹ</h3><p>Nội dung: Phát động chiến dịch, tổ chức các hoạt động gây quỹ tại trường.</p></div></div>
+                <div class="timeline-item hidden"><div class="timeline-dot"></div><div class="timeline-content"><h3>Giai đoạn 2: Lễ Ra quân</h3><p>Nội dung: Tổ chức lễ ra quân, công bố các thông tin chính thức của chiến dịch.</p></div></div>
+                <div class="timeline-item hidden"><div class="timeline-dot"></div><div class="timeline-content"><h3>Giai đoạn 3: Hành trình đến mái ấm</h3><p>Nội dung: Di chuyển đến địa điểm, chuẩn bị và tổ chức các hoạt động cho các em nhỏ.</p></div></div>
+                 <div class="timeline-item hidden"><div class="timeline-dot"></div><div class="timeline-content"><h3>Giai đoạn 4: Tổng kết</h3><p>Nội dung: Tổng kết và báo cáo kết quả của chiến dịch.</p></div></div>
+            </div>
+        </section>
+
+        <!-- TÍNH NĂNG 2: BAN TỔ CHỨC -->
+        <section id="team" class="container">
+            <h2 class="hidden">Gương mặt Ban Tổ Chức</h2>
+            <div class="swiper team-slider hidden">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 (Trưởng BTC) -->
+                    <div class="swiper-slide">
+                        <div class="team-card"><div class="team-card-img"><img src="images/members/HCMUS@Default.jpg" alt="Mentor 1"></div><div class="team-card-info"><h3>Mentor 1</h3><p>Cố Vấn</p></div></div>
+                    </div>
+                    <!-- Slide 2 (Phó BTC) -->
+                    <div class="swiper-slide">
+                        <div class="team-card"><div class="team-card-img"><img src="images/members/NhatNguyen.jpg" alt="Thành viên 1"></div><div class="team-card-info"><h3>Ngô Nhật Nguyên</h3><p>Trưởng Ban Tổ Chức</p></div></div>
+                    </div>
+                    <!-- Slide 3 (Thành viên) -->
+                    <div class="swiper-slide">
+                        <div class="team-card"><div class="team-card-img"><img src="images/members/HCMUS@Default.jpg" alt="Mentor 2"></div><div class="team-card-info"><h3>Mentor 2</h3><p>Cố Vấn</p></div></div>
+                    </div>
+                    <!-- Slide 4 (Thành viên) -->
+                    <div class="swiper-slide">
+                        <div class="team-card"><div class="team-card-img"><img src="images/members/HuuLong.jpg" alt="Thành viên 2"></div><div class="team-card-info"><h3>Phạm Hữu Long</h3><p>Thành Viên</p></div></div>
+                    </div>
+                    <!-- Slide 5 (Thành viên) -->
+                    <div class="swiper-slide">
+                        <div class="team-card"><div class="team-card-img"><img src="images/members/KhanhHung.jpg" alt="Thành viên 3"></div><div class="team-card-info"><h3>Trần Khánh Hưng</h3><p>Thành Viên</p></div></div>
+                    </div>
+                    <!-- Slide 6 (Thành viên) -->
+                    <div class="swiper-slide">
+                        <div class="team-card"><div class="team-card-img"><img src="images/members/HCMUS@Default.jpg" alt="Thành viên 4"></div><div class="team-card-info"><h3>Đoàn Hoàng Việt</h3><p>Thành Viên</p></div></div>
+                    </div>
+                    <!-- Slide 7 (Thành viên) -->
+                    <div class="swiper-slide">
+                        <div class="team-card"><div class="team-card-img"><img src="images/members/HCMUS@Default.jpg" alt="Thành viên 5"></div><div class="team-card-info"><h3>Lê Danh Tuấn</h3><p>Thành Viên</p></div></div>
+                    </div>
+                    <!-- Slide 8 (Thành viên) -->
+                    <div class="swiper-slide">
+                        <div class="team-card"><div class="team-card-img"><img src="images/members/HCMUS@Default.jpg" alt="Thành viên 6"></div><div class="team-card-info"><h3>Phan Thị Thơm</h3><p>Thành Viên</p></div></div>
+                    </div>
+                    <!-- Slide 9 (Mentor) -->
+                    <div class="swiper-slide">
+                        <div class="team-card"><div class="team-card-img"><img src="images/members/HCMUS@Default.jpg" alt="Thành viên 7"></div><div class="team-card-info"><h3>Bùi Phương Linh</h3><p>Thành Viên</p></div></div>
+                    </div>
+                    <!-- Slide 10 (Mentor) -->
+                    <div class="swiper-slide">
+                        <div class="team-card"><div class="team-card-img"><img src="images/members/PhuKhang.jpg" alt="Thành viên 8"></div><div class="team-card-info"><h3>Phạm Văn Phú Khang</h3><p>Thành Viên</p></div></div>
+                    </div>
+                </div>
+                <!-- Nút bấm qua lại -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!-- SECTION: THƯ VIỆN ẢNH (CẬP NHẬT CHO LIGHTBOX) -->
+        <section id="thu-vien" class="container dark-section">
+            <h2 class="hidden">Khoảnh khắc đáng nhớ</h2>
+            
+            <h3 class="gallery-subtitle hidden">XUÂN TÌNH NGUYỆN 2024</h3>
+            <div class="gallery gallery-2024 hidden"> <!-- Thêm class gallery-2024 để phân biệt -->
+                <!-- Ảnh 1 -->
+                <a href="images/gallery-2025/anh_1.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_1.jpg" alt="Mô tả ảnh 1 - 2024">
+                </a>
+                <!-- Ảnh 2 -->
+                <a href="images/gallery-2025/anh_2.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_2.jpg" alt="Mô tả ảnh 2 - 2024">
+                </a>
+                <!-- Ảnh 3 -->
+                <a href="images/gallery-2025/anh_3.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_3.jpg" alt="Mô tả ảnh 3 - 2024">
+                </a>
+                <!-- Ảnh 4 -->
+                <a href="images/gallery-2025/anh_4.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_4.jpg" alt="Mô tả ảnh 4 - 2024">
+                </a>
+                <!-- Ảnh 5 -->
+                <a href="images/gallery-2025/anh_5.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_5.jpg" alt="Mô tả ảnh 5 - 2024">
+                </a>
+                <!-- Ảnh 6 -->
+                <a href="images/gallery-2025/anh_6.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_6.jpg" alt="Mô tả ảnh 6 - 2024">
+                </a>
+            </div>
+
+            <h3 class="gallery-subtitle hidden">XUÂN TÌNH NGUYỆN 2025</h3>
+            <div class="gallery gallery-2025 hidden"> <!-- Thêm class gallery-2025 để phân biệt -->
+                <!-- Ảnh 7 -->
+                <a href="images/gallery-2025/anh_7.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_7.jpg" alt="Mô tả ảnh 1 - 2025">
+                </a>
+                <!-- Ảnh 8 -->
+                <a href="images/gallery-2025/anh_8.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_8.jpg" alt="Mô tả ảnh 2 - 2025">
+                </a>
+                <!-- Ảnh 9 -->
+                <a href="images/gallery-2025/anh_9.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_9.jpg" alt="Mô tả ảnh 3 - 2025">
+                </a>
+                <!-- Ảnh 10 -->
+                <a href="images/gallery-2025/anh_10.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_10.jpg" alt="Mô tả ảnh 4 - 2025">
+                </a>
+                <!-- Ảnh 11 -->
+                <a href="images/gallery-2025/anh_11.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_11.jpg" alt="Mô tả ảnh 5 - 2025">
+                </a>
+                <!-- Ảnh 12 -->
+                <a href="images/gallery-2025/anh_12.jpg" class="gallery-item">
+                    <img src="images/gallery-2025/anh_12.jpg" alt="Mô tả ảnh 6 - 2025">
+                </a>
+            </div>
+
+            <h3 class="gallery-subtitle hidden">MÙA XUÂN ĐỎ 2026</h3>
+            <div class="gallery-coming-soon hidden">
+                <p>Những khoảnh khắc của mùa xuân năm nay sẽ sớm được tiết lộ!</p>
+            </div>
+        </section>
+
+        <!-- TÍNH NĂNG 3: NHÀ TÀI TRỢ CAROUSEL -->
+        <section id="sponsors" class="container">
+            <h2 class="hidden">Đồng hành cùng chúng tôi</h2>
+            <div class="slider hidden">
+                <div class="slide-track">
+                    <div class="slide"><img src="images/sponsor/CLB SV 5T.png" alt="CLB SV5T"></div>
+                    <div class="slide"><img src="images/sponsor/HCMUS.png" alt="Trường HCMUS"></div>
+                    <div class="slide"><img src="images/sponsor/Hoi SV.png" alt="Hội sinh viên"></div>
+                    <div class="slide"><img src="images/sponsor/XuanTinhNguyen.png" alt="Xuân tình nguyện"></div>
+                    <div class="slide"><img src="images/sponsor/Mua Xuan Do.png" alt="Đội hình Mùa Xuân Đỏ"></div>
+                    <!-- Nhân đôi để lặp -->
+                    <div class="slide"><img src="images/sponsor/CLB SV 5T.png" alt="CLB SV5T"></div>
+                    <div class="slide"><img src="images/sponsor/HCMUS.png" alt="Trường HCMUS"></div>
+                    <div class="slide"><img src="images/sponsor/Hoi SV.png" alt="Hội sinh viên"></div>
+                    <div class="slide"><img src="images/sponsor/XuanTinhNguyen.png" alt="Xuân tình nguyện"></div>
+                    <div class="slide"><img src="images/sponsor/Mua Xuan Do.png" alt="Đội hình Mùa Xuân Đỏ"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- TÍNH NĂNG 4: FAQ ACCORDION -->
+        <section id="faq" class="container dark-section">
+            <h2 class="hidden">Câu hỏi thường gặp</h2>
+            <div class="faq-container hidden">
+                <div class="faq-item"><div class="faq-question"><span>Làm thế nào để đăng ký tham gia chiến dịch?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>Bạn có thể đăng ký trực tiếp qua Google Form ở mục "Đăng ký" trên trang web này. Hãy điền đầy đủ thông tin và chờ email xác nhận từ Ban Tổ Chức nhé!</p></div></div>
+                <div class="faq-item"><div class="faq-question"><span>Chiến dịch có yêu cầu gì đặc biệt đối với tình nguyện viên không?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>Chúng mình chào đón tất cả các bạn sinh viên có lòng nhiệt huyết và tinh thần trách nhiệm. Các yêu cầu cụ thể cho từng ban chuyên môn sẽ được phổ biến trong buổi phỏng vấn.</p></div></div>
+                 <div class="faq-item"><div class="faq-question"><span>Mình có nhận được giấy chứng nhận sau khi tham gia không?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer"><p>Có nhé! Tất cả các tình nguyện viên hoàn thành tốt nhiệm vụ sẽ nhận được giấy chứng nhận online từ Ban Tổ Chức, đây là một điểm cộng đẹp trong hồ sơ hoạt động ngoại khóa của các bạn.</p></div></div>
+            </div>
+        </section>
+
+        <!-- SECTION: ĐĂNG KÝ -->
+        <section id="dang-ky" class="container">
+            <h2 class="hidden">Tham gia cùng chúng tôi</h2>
+            <p class="hidden">Hãy điền vào form dưới đây để trở thành một phần của Mùa Xuân Đỏ 2026!</p>
+            <div class="google-form-container hidden">
+                <!-- ĐÃ THÊM IFRAME CỦA BẠN VÀO ĐÂY -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd-Uc44ZoCoR_pXzZ33ko7XaLBeX8GbjSmTNV7LIrKoLChOIQ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Đang tải…</iframe>
+            </div>
+        </section>
+        <!-- MỤC MỚI: TẠO KHUNG HÌNH -->
+        <section id="avatar-frame" class="container dark-section">
+            <h2 class="hidden">Lan tỏa tinh thần "Mùa Xuân Đỏ"</h2>
+            <p class="hidden" style="text-align: center; max-width: 700px; margin: 0 auto 2rem auto;">Hãy cùng nhau thay đổi ảnh đại diện của bạn với khung hình chính thức của chiến dịch để lan tỏa ngọn lửa tình nguyện đến với mọi người nhé!</p>
+            
+            <!-- Lời kêu gọi hành động tạo khung hình -->
+            <div class="frame-cta-container hidden">
+                <a href="https://khunghinh.net/p/Khung-xuan-tinh-nguyen-2026-Nhom-1" target="_blank" class="btn btn-large">
+                    <i class="fas fa-camera-retro"></i>
+                    Tạo khung ảnh đại diện ngay!
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="lien-he">
+        <div class="footer-content"><div class="footer-left"><h3>CLB Sinh viên 5 tốt</h3><p>Trường Đại học Khoa học Tự nhiên, ĐHQG-TPHCM</p></div><div class="footer-right"><h3>Thông tin liên hệ</h3><p>Email: clbsv5tot.hcmus@gmail.com</p><p>Fanpage: CLB Sinh viên 5 Tốt HCMUS</p><p>Website: doantn.hcmus.edu.vn</p></div></div>
+        <div class="footer-credit"><p>Website được thiết kế và phát triển bởi Ngô Nhật Nguyên - Khoa Kỹ thuật Điện tử - Viễn thông - DKD1</p></div>
+    </footer>
+
+    <!-- CÁC NÚT TIỆN ÍCH -->
+    <a id="back-to-top" href="#home"><i class="fas fa-arrow-up"></i></a>
+    <div id="contact-bubble-container">
+        <div class="bubble-options">
+            <a href="https://zalo.me/0966043003" target="_blank" class="option" style="--i:0;" data-tooltip="Zalo"><i class="fa-solid fa-comment-dots"></i></a>
+            <a href="https://www.facebook.com/SV5T.HCMUS" target="_blank" class="option" style="--i:1;" data-tooltip="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:ngonhatnguyenk2007@gmail.com" class="option" style="--i:2;" data-tooltip="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="contact-bubble"><i class="fas fa-comment-alt"></i></div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức & Thông báo - Xuân Tình Nguyện 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body data-theme="light">
+
+    <!-- SAO CHÉP Y HỆT HEADER TỪ main.html -->
+    <header>
+        <nav>
+            <div class="logo"><a href="main.html">Mùa Xuân Đỏ 2026</a></div>
+            <ul class="nav-links">
+                <li><a href="main.html">Trang chủ</a></li>
+                <li><a href="main.html#gioi-thieu">Giới thiệu</a></li>
+                <li><a href="tin-tuc.html">Tin tức</a></li> <!-- Link đến chính nó -->
+                <li><a href="main.html#team">Ban Tổ Chức</a></li>
+                <li><a href="main.html#faq">FAQ</a></li>
+                <li><a href="main.html#dang-ky">Đăng ký</a></li>
+            </ul>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox"><input type="checkbox" id="checkbox" /><div class="slider round"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></div></label>
+            </div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner cho trang tin tức -->
+        <section class="page-header">
+            <h1>Tin tức & Thông báo</h1>
+        </section>
+
+        <!-- Khu vực chứa các bài tin tức -->
+        <section id="news-section" class="container">
+            <div class="news-grid">
+                <!-- MẪU BÀI VIẾT 1 (Bạn có thể copy-paste để nhân bản) -->
+                <div class="news-card hidden">
+                    <div class="news-card-img">
+                        <img src="images/thumnail/tb_1.png" alt="Ảnh bài viết">
+                    </div>
+                    <div class="news-card-body">
+                        <span class="news-category">Thông báo</span>
+                        <h3>Chính thức phát động chiến dịch Xuân Tình Nguyện 2026</h3>
+                        <p class="news-meta">Đăng bởi Ban Tổ Chức | Ngày 01/01/2026</p>
+                        <p>Chiến dịch Xuân Tình Nguyện "Mùa Xuân Đỏ 2026" đã chính thức được khởi động, hứa hẹn mang đến một mùa xuân ấm áp và ý nghĩa cho các em nhỏ tại mái ấm...</p>
+                        <a href="#" class="btn-read-more">Đọc thêm</a>
+                    </div>
+                </div>
+
+                <!-- MẪU BÀI VIẾT 2 -->
+                <div class="news-card hidden">
+                    <div class="news-card-img">
+                        <img src="images/thumnail/tt_1.png" alt="Ảnh bài viết">
+                    </div>
+                    <div class="news-card-body">
+                        <span class="news-category">Tin tức hoạt động</span>
+                        <h3>Buổi gây quỹ đầu tiên thành công tốt đẹp</h3>
+                        <p class="news-meta">Đăng bởi Ban Truyền Thông | Ngày 05/01/2026</p>
+                        <p>Sự kiện gây quỹ "Gói trọn yêu thương" đã diễn ra thành công ngoài mong đợi nhờ vào sự ủng hộ nhiệt tình của đông đảo các bạn sinh viên...</p>
+                        <a href="#" class="btn-read-more">Đọc thêm</a>
+                    </div>
+                </div>
+                
+                <!-- Thêm các bài viết khác tại đây -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer id="lien-he">
+        <div class="footer-content"><div class="footer-left"><h3>CLB Sinh viên 5 tốt</h3><p>Trường Đại học Khoa học Tự nhiên, ĐHQG-TPHCM</p></div><div class="footer-right"><h3>Thông tin liên hệ</h3><p>Email: clbsv5tot.hcmus@gmail.com</p><p>Fanpage: CLB Sinh viên 5 Tốt HCMUS</p><p>Website: doantn.hcmus.edu.vn</p></div></div>
+        <div class="footer-credit"><p>Website được thiết kế và phát triển bởi Ngô Nhật Nguyên - Khoa Kỹ thuật Điện tử - Viễn thông - DKD1</p></div>
+    </footer>
+
+    <!-- Chúng ta cần một chút JS riêng cho trang này, nhưng có thể dùng chung file cũ -->
+    <script src="script.js"></script>
+</body>
+</html>
