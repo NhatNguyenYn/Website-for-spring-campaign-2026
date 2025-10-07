@@ -4,6 +4,24 @@
     --heading-color: #c0392b; --bg-color: #fdfdfd; --surface-bg-color: #ffffff;
     --border-color: #ddd; --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--surface-bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a52d20;
+}
+/* Cho Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--surface-bg-color);
+}
 [data-theme="dark"] {
     --text-color: #f1f1f1; --heading-color: #e74c3c; --bg-color: #121212;
     --surface-bg-color: #1e1e1e; --border-color: #444;
@@ -101,6 +119,9 @@ nav .nav-links { list-style: none; display: flex; }
 nav .nav-links li { margin-left: 1.5rem; }
 nav .nav-links li a { text-decoration: none; color: var(--text-color); font-weight: bold; transition: color 0.3s ease; }
 nav .nav-links li a:hover { color: var(--primary-color); }
+nav .nav-links li a.active-link {
+    color: var(--primary-color);
+}
 
 /* --- DARK MODE TOGGLE SWITCH (PHIÊN BẢN NÂNG CẤP - SỬA LỖI TRIỆT ĐỂ) --- */
 .theme-switch-wrapper {

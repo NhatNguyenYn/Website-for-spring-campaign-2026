@@ -224,5 +224,34 @@ document.addEventListener('DOMContentLoaded', function() {
     if (zaloBtn) {
         zaloBtn.href = `https://zalo.me/share?u=${encodeURIComponent(pageUrl)}`;
     }
+    // TÍNH NĂNG 1: TỰ ĐỘNG HIGHLIGHT MỤC MENU ĐANG XEM
+    const sections = document.querySelectorAll('section[id]'); // Lấy tất cả các section có id
+    const navLi = document.querySelectorAll('.nav-links li a');
 
+    const navObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Lấy id của section đang hiển thị
+                const currentId = entry.target.id;
+
+                // Xóa class 'active-link' khỏi tất cả các link
+                navLi.forEach(link => {
+                    link.classList.remove('active-link');
+                });
+
+                // Tìm link tương ứng với section và thêm class 'active-link'
+                const activeLink = document.querySelector(`.nav-links a[href*="#${currentId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active-link');
+                }
+            }
+        });
+    }, {
+        threshold: 0.5, // Kích hoạt khi 50% section vào màn hình
+        rootMargin: "-100px 0px -100px 0px" // Thu hẹp vùng "nhìn thấy" một chút để highlight chính xác hơn
+    });
+
+    sections.forEach(section => {
+        navObserver.observe(section);
+    });
 });
